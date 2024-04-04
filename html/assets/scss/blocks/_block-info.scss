@@ -1,0 +1,426 @@
+.block-info {
+   margin-bottom: 80px;
+
+
+
+   &_sanitation {
+      margin-bottom: 50px;
+   }
+
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      &_professional {
+         gap: 210px;
+
+         @include r(1255) {
+            gap: 155px;
+         }
+
+         @include r(1200) {
+            gap: 25px;
+         }
+      }
+
+      &_general {
+         gap: 151px;
+
+         @include r(1320) {
+            gap: 100px;
+         }
+
+         @include r(1200) {
+            gap: 0;
+         }
+      }
+
+      &_emergency {
+         gap: 100px;
+
+         @include r(1300) {
+            gap: 20px;
+         }
+      }
+
+      &_manufacturing {
+         display: block;
+      }
+
+      &_advantages,
+      &_warehouse {
+         gap: 25px;
+      }
+
+      &_meat {
+         align-items: start;
+
+         @include r(1206) {
+            gap: 40px;
+         }
+
+         @include r(992) {
+            gap: 20px;
+         }
+      }
+   }
+
+   &__content {
+
+      &_manufacturing,
+      &_sanitation {
+         display: flex;
+         align-items: center;
+         gap: 50px;
+
+         @include r(1206) {
+            gap: 30px;
+         }
+
+         @include r(992) {
+            gap: 20px;
+         }
+      }
+
+      &_general {
+         @include r(767) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+
+         h2 {
+            @include r(1200) {
+               font-size: 34px;
+            }
+
+            @include r(767) {
+               font-size: 48px;
+            }
+
+            @include r(576) {
+               font-size: 34px;
+            }
+         }
+      }
+   }
+
+   &__title {
+      margin-bottom: 10px;
+
+      @include r(767) {
+         text-align: center;
+      }
+   }
+
+   &__text {
+      padding-bottom: 25px;
+      font-size: 22px;
+
+      @include r(767) {
+         text-align: center;
+      }
+
+      &_professional {
+         font-size: 18px;
+         line-height: 140%;
+         padding-right: 50px;
+
+         @include r(1200) {
+            font-size: 15px;
+         }
+
+         @include r(992) {
+            padding-right: 0px;
+         }
+      }
+
+      &_general {
+         font-size: 15px;
+         padding-right: 203px;
+
+         ul {
+            padding-left: 25px;
+            list-style-type: square;
+         }
+
+         @include r(1320) {
+            padding-right: 40px;
+         }
+
+         @include r(767) {
+            padding-right: 0;
+         }
+      }
+
+      &_emergency {
+         font-size: 15px;
+
+         @include r(1300) {
+            line-height: 19px;
+            padding-bottom: 20px;
+         }
+
+         @include r(1220) {
+            line-height: 18px;
+            padding-bottom: 15px;
+         }
+
+         @include r(1200) {
+            font-size: 12px;
+         }
+      }
+
+      &_manufacturing {
+         font-size: 22px;
+         line-height: 120%;
+         padding-right: 94px;
+
+         @include r(1300) {
+            padding-right: 45px;
+         }
+
+         @include r(1251) {
+            padding-right: 0px;
+         }
+
+         @include r(1200) {
+            font-size: 18px;
+         }
+
+         @include r(992) {
+            font-size: 15px;
+         }
+      }
+
+      &_advantages {
+         font-size: 22px;
+         line-height: normal;
+         padding: 0;
+
+         @include r(1200) {
+            font-size: 18px;
+         }
+
+         @include r(992) {
+            font-size: 15px;
+         }
+      }
+
+      &_sanitation {
+         font-size: 22px;
+         padding-top: 10px;
+
+         @include r(1200) {
+            font-size: 18px;
+         }
+
+         @include r(992) {
+            font-size: 15px;
+         }
+
+         @include r(767) {
+            text-align: center;
+         }
+      }
+   }
+
+   &__img {
+      border-radius: 25px 0px;
+
+      @include r(992) {
+         width: 360px;
+         height: 451px;
+      }
+
+      @include r(767) {
+         display: none;
+      }
+
+      &_professional {
+         width: 550px;
+         border-radius: 0 0 100px 0;
+
+         @include r(1330) {
+            width: 478px;
+         }
+
+         @include r(992) {
+            width: 345px;
+            height: 428px;
+         }
+      }
+
+      &_general {
+         width: 504px;
+         border-radius: 0 100px 0 0;
+
+         @include r(1200) {
+            width: 469px;
+            height: 500px;
+         }
+
+         @include r(992) {
+            width: 338px;
+            height: 580px;
+         }
+      }
+
+      &_advantages {
+         border-radius: 0px 25px;
+         width: 440px;
+
+         @include r(1200) {
+            width: 400px;
+         }
+
+         @include r(992) {
+            width: 320px;
+            height: auto;
+         }
+      }
+
+      &_meat {
+         @include r(1200) {
+            height: 720px;
+         }
+
+         @include r(992) {
+            height: 580px;
+         }
+
+         &-third {
+            @include r(992) {
+               height: 790px;
+            }
+         }
+      }
+
+      &_meatSecond {
+         width: 440px;
+
+         @include r(1200) {
+            width: 310px;
+            height: 310px;
+         }
+
+         @include r(992) {
+            width: 250px;
+            height: 260px;
+         }
+      }
+   }
+
+   &__button {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+
+      @include r(767) {
+         justify-content: center;
+      }
+
+      @include r(576) {
+         flex-direction: column;
+         gap: 25px;
+      }
+
+      a {
+         color: rgba(30, 30, 35, 0.7);
+      }
+   }
+
+   &__btn {
+      background-color: $blue;
+      border-radius: 25px 0px 0px 0px;
+      color: #fff !important;
+
+      img {
+         padding-left: 12px;
+      }
+
+      &_manufacturing {
+         font-size: 18px;
+         border-radius: 35px 0;
+      }
+   }
+
+   &__services {
+      @include r(767) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__services,
+   &__price {
+
+      p {
+         font-size: 22px;
+
+         @include r(1200) {
+            font-size: 18px;
+         }
+
+         @include r(992) {
+            font-size: 15px;
+         }
+
+         @include r(767) {
+            text-align: center;
+         }
+      }
+   }
+
+   &__price {
+      @include r(767) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      p {
+         margin-bottom: 15px;
+      }
+
+      ul {
+         padding-left: 35px;
+         list-style-type: square;
+         font-size: 22px;
+
+         @include r(1200) {
+            font-size: 18px;
+         }
+
+         @include r(992) {
+            font-size: 15px;
+         }
+
+         li {
+            padding: 7px 0;
+         }
+      }
+   }
+
+   &__list {
+      ul {
+         padding: 10px 0;
+         padding-left: 25px;
+         list-style-type: square;
+
+         li {
+            font-size: 22px;
+            line-height: normal;
+
+            @include r(1200) {
+               font-size: 18px;
+            }
+
+            @include r(992) {
+               font-size: 15px;
+            }
+         }
+      }
+   }
+}

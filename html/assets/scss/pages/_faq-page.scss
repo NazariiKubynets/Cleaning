@@ -1,0 +1,40 @@
+.faq {
+   margin-bottom: 70px;
+
+   >div{
+      max-width: 1330px;
+      align-items: start;
+      @include r(1200) {
+         max-width: 992px;
+       }
+     
+       @include r(992) {
+         max-width: 768px;
+       }
+     
+       @include r(767) {
+         max-width: 576px;
+       }
+     
+       @include r(576) {
+         max-width: 480px;
+       }
+
+      a{
+         display: none;
+      }
+   }
+
+   h1{
+      display: none;
+   }
+
+   h2 {
+      margin-bottom: 30px;
+      text-align: left;
+
+      @include r(992) {
+         font-size: 34px;
+      }
+   }
+}

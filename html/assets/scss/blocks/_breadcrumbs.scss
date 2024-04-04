@@ -1,0 +1,28 @@
+.breadcrumbs {
+   margin-bottom: 30px;
+   margin-top: 10px;
+
+   a {
+      line-height: normal;
+      color: rgba(30, 30, 35, 0.50);
+      cursor: pointer;
+
+      @include r(767) {
+         font-size: 12px;
+      }
+   }
+
+   svg{
+      position: relative;
+      top: 3px;
+      // padding-top: 10px;
+   }
+
+   &__current {
+      color: $dark;
+
+      @include r(767) {
+         font-size: 12px;
+      }
+   }
+}

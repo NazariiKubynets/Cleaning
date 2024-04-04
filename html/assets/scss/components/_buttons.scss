@@ -1,0 +1,21 @@
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   border-radius: 25px 0px;
+   max-width: fit-content;
+   background-color: $dark;
+   padding: 15px 35px;
+   color: #fff;
+   border: 0;
+
+   &:hover {
+      background: #1e1e23d8;
+      color: #fff;
+   }
+
+   &:active {
+      color: #fff;
+   }
+}

@@ -1,0 +1,15 @@
+.img {
+   width: 513px;
+   flex-shrink: 0;
+   overflow: hidden;
+
+   img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @include r(1200) {
+         height: 100%;
+      }
+   }
+}

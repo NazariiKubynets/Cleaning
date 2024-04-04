@@ -1,0 +1,243 @@
+.benefits {
+   background-color: #4682F0;
+   counter-reset: section;
+   padding-top: 50px;
+
+   &__container {
+      padding-bottom: 80px;
+
+      @include r(1200) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      >p {
+         padding: 0 170px;
+
+         @include r(1200) {
+            padding: 0 200px;
+         }
+
+         @include r(992) {
+            padding: 0 120px;
+         }
+
+         @include r(767) {
+            padding: 0 80px;
+         }
+
+         @include r(576) {
+            padding: 0;
+         }
+      }
+   }
+
+   &__line {
+      border: 1px solid #6EA0FA;
+      width: 100vw;
+      margin: 0;
+
+      @include r(1200) {
+         display: none;
+      }
+   }
+
+   &__row {
+      position: relative;
+
+      &:first-child {
+         &::after {
+            border: 1px solid #6EA0FA;
+            width: 100vw;
+            height: 1px;
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 60px;
+
+            @include r(1200) {
+               display: none;
+            }
+         }
+      }
+   }
+
+   &__info {
+      padding: 0 230px;
+      margin-bottom: 35px;
+
+      @include r(1200) {
+         padding: 0 180px;
+      }
+
+      @include r(992) {
+         padding: 0 160px;
+      }
+
+      @include r(772) {
+         padding: 0 155px;
+      }
+
+      @include r(767) {
+         padding: 0;
+      }
+
+      &_factory {
+         padding: 0 118px;
+
+         @include r(1200) {
+            padding: 0 60px;
+         }
+
+         @include r(992) {
+            padding: 0 50px;
+         }
+
+         @include r(840) {
+            padding: 0 14px;
+         }
+
+         @include r(767) {
+            padding: 0;
+         }
+      }
+
+      &_sanitation {
+         padding: 0 30px;
+      }
+   }
+
+   &__title {
+      padding-top: 18px;
+      font-size: 15px;
+      text-align: center;
+      line-height: normal;
+      color: #fff;
+   }
+
+   &__subtitle {
+      text-align: center;
+      color: #fff;
+
+      &_sanitation {
+         padding: 0 96px;
+
+         @include r(767) {
+            padding: 0;
+         }
+      }
+   }
+
+   &__text {
+      color: rgba(255, 255, 255, 0.70);
+      text-align: center;
+      font-size: 18px;
+      line-height: 140%;
+
+      @include r(1200) {
+         font-size: 15px;
+      }
+   }
+
+   &__list {
+      margin-bottom: 50px;
+
+      &_sanitation,
+      &_warehouse {
+         margin-bottom: 0;
+      }
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      @include r(1200) {
+         max-width: 550px;
+      }
+
+      @include r(767) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__flex-row-break {
+      display: block;
+      height: 0;
+      flex-basis: 100%;
+
+      @include r(1200) {
+         display: none;
+      }
+
+      &::after {
+         border: 1px solid #6EA0FA;
+         width: 100vw;
+         height: 1px;
+         content: "";
+         display: block;
+
+         @include r(1200) {
+            display: none;
+         }
+      }
+   }
+
+   &__item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 42px 40px;
+      max-width: 248px;
+      min-height: 302px;
+
+      p {
+         flex: 1;
+         color: $dark;
+         text-align: center;
+         font-size: 18px;
+         line-height: normal;
+      }
+
+
+      &_top {
+         position: relative;
+         top: 30px;
+
+         @include r(1200) {
+            top: 0;
+         }
+      }
+
+      &_bottom {
+         position: relative;
+         bottom: 30px;
+
+         @include r(1200) {
+            bottom: 0;
+         }
+      }
+   }
+
+   &__ordinal {
+      text-align: center;
+      color: #4682F0;
+      font-size: 64px;
+      font-weight: 700;
+      padding-bottom: 20px;
+      line-height: normal;
+
+      &::before {
+         counter-increment: section;
+         content: counter(section);
+      }
+   }
+}
+
+// <?php echo ($benefits_item == $benefits_count / 2) ? 'top' : 'bottom'; ?>

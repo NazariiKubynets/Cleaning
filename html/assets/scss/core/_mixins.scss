@@ -1,0 +1,90 @@
+
+//----------------------+r(1200)----------------------
+@mixin r($width) {
+  @media only screen and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin rh($height) {
+  @media only screen and (max-height: #{$height}px) {
+    @content;
+  }
+}
+
+@mixin rhmin($height) {
+  @media only screen and (min-height: #{$height}px) {
+    @content;
+  }
+}
+
+//----------------------+pseudo----------------------
+%pseudo {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@mixin pseudo {
+  @extend %pseudo;
+}
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+//----------------------+absolute----------------------
+@mixin absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+//----------------------+rotate----------------------
+@mixin rotate($var) {
+  transform: rotate($var+deg);
+}
+//----------------------+scale----------------------
+@mixin scale($var) {
+  transform: scale($var);
+}
+//----------------------+transition----------------------
+@mixin transition {
+  transition: all .6s;
+}
+
+//----------------------+between----------------------
+@mixin between {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+//----------------------+around----------------------
+@mixin around {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+//----------------------+last----------------------
+%last {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+@mixin last {
+  @extend %last;
+}
+

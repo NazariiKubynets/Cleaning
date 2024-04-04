@@ -1,0 +1,257 @@
+.our-services {
+   margin-bottom: 80px;
+
+   &__container {
+      display: flex;
+      gap: 20px;
+
+      @include r(1200) {
+         flex-direction: column;
+      }
+
+      @include r(992) {
+         gap: 16px;
+      }
+   }
+
+   &__title {
+      display: flex;
+      align-items: center;
+      background: $blue;
+      border-radius: 100px 0 0 0;
+      text-align: center;
+      padding: 0px 25px;
+      color: #FFFFFF;
+
+      @include r(1200) {
+         padding: 64px 286px;
+      }
+
+      @include r(992) {
+         padding: 64px 230px;
+      }
+
+      @include r(767) {
+         padding: 60px 70px;
+      }
+   }
+
+   &__items {
+      display: grid;
+      grid-template: 1fr 1fr/ 1fr 1fr;
+      gap: 20px;
+
+      @include r(992) {
+         gap: 16px;
+      }
+
+      @include r(767) {
+         grid-template: 1fr 1fr 1fr 1fr/ 1fr;
+      }
+   }
+
+   &__item {
+      padding: 30px;
+      border: 1px solid #E6E6E6;
+
+      &:last-child {
+         border-radius: 0 0 100px 0;
+
+         @include r(992) {
+            border-radius: 0;
+         }
+      }
+
+      @include r(767) {
+         h4 {
+            font-size: 22px;
+         }
+
+         a {
+            font-size: 12px;
+         }
+      }
+
+      p {
+         color: rgba(30, 30, 35, 0.5);
+         font-size: 15px;
+         padding-bottom: 10px;
+
+         @include r(767) {
+            font-size: 12px;
+         }
+      }
+
+      a {
+         color: #4682F0;
+      }
+   }
+
+   &__subtitle {
+      font-size: 28px;
+      line-height: 35px;
+      color: $dark;
+      padding-bottom: 7px;
+   }
+
+   &__block {
+      flex: 1;
+      padding: 30px 54px 30px 30px;
+      border: 1px solid #E6E6E6;
+
+      &_last {
+         border-radius: 0px 0px 100px 0px;
+      }
+   }
+}
+
+.forma {
+   background: #F6F6F6;
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      padding-top: 9px;
+      gap: 54px;
+
+      @include r(767) {
+         img {
+            display: none;
+         }
+      }
+   }
+
+   &__title {
+      margin-bottom: 15px;
+
+      @include r(767) {
+         text-align: center;
+      }
+   }
+
+   &__form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 500px;
+
+      @include r(767) {
+         align-items: center;
+         margin-bottom: 50px;
+      }
+   }
+
+   .invalid {
+      .btn {
+         background-color: #FF3A3A;
+      }
+   }
+
+   .failed {
+      .btn {
+         background-color: rgb(70, 130, 240);
+      }
+
+      .form__input {
+         border: 1px solid rgb(70, 130, 240);
+         color: rgb(70, 130, 240);
+      }
+   }
+
+   .wpcf7-response-output {
+      display: none;
+   }
+
+   .wpcf7-not-valid {
+      border: 1px solid #FF3A3A;
+      color: #FF3A3A;
+
+      &-tip {
+         text-transform: uppercase;
+      }
+   }
+
+   .wpcf7-spinner{
+      display: none;
+   }
+
+
+
+}
+
+.testimonials {
+   margin: 80px 0;
+
+   &__title {
+      font-size: 15px;
+      text-align: center;
+      line-height: normal;
+      color: $blue;
+   }
+
+   &__subtitle {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 50px;
+
+      @include r(992) {
+         font-size: 34px;
+      }
+   }
+
+   &__block {
+      display: flex;
+      gap: 125px;
+
+      @include r(767) {
+         flex-direction: column;
+      }
+   }
+
+   &__item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+   }
+
+   &__text {
+      text-align: center;
+      line-height: normal;
+      margin-bottom: 10px;
+
+      @include r(767) {
+         padding: 0 120px;
+      }
+
+      @include r(576) {
+         padding: 0 72px;
+      }
+
+      @include r(436) {
+         padding: 0 40px;
+      }
+   }
+
+   &__name {
+      text-align: center;
+      line-height: normal;
+      font-size: 18px;
+      font-weight: 600;
+      color: $dark;
+      margin-bottom: 5px;
+   }
+
+   &__description {
+      text-align: center;
+      line-height: normal;
+      color: $dark;
+      opacity: 0.5;
+   }
+}

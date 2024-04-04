@@ -1,0 +1,57 @@
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   color: var(--color-base-100);
+//   font-family: $Quicksand;
+// }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+  font-family: $fonts;
+  font-size: 15px;
+  font-style: normal;
+  color: $text;
+  line-height: 19px;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+::placeholder {
+  color: #666;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include r(1200) {
+    max-width: 992px;
+  }
+
+  @include r(992) {
+    max-width: 768px;
+  }
+
+  @include r(767) {
+    max-width: 576px;
+  }
+
+  @include r(576) {
+    max-width: 480px;
+  }
+}

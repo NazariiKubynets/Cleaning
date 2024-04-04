@@ -1,0 +1,62 @@
+.notFound {
+   margin-bottom: 80px;
+   margin-top: 80px;
+ 
+   &__container {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+   }
+   svg {
+     margin-bottom: 50px;
+   }
+   div {
+     > svg {
+       @include r(992) {
+         width: 305px;
+         margin-bottom: 25px;
+       }
+     }
+   }
+   h1 {
+     color: #000;
+     font-size: 34px;
+     margin-bottom: 10px;
+   }
+   p {
+     text-align: center;
+     font-size: 18px;
+     margin-bottom: 20px;
+ 
+     @include r(992) {
+       font-size: 15px;
+     }
+   }
+   &__btn {
+     display: flex;
+     gap: 25px;
+ 
+     @include r(576) {
+       flex-direction: column;
+     }
+     a {
+       &:first-child {
+         background-color: #fff;
+         border-radius: 25px 0px 0px 0px;
+         border: 1px solid #CDD4D7;
+         color: #000;
+         @include r(576) {
+           padding-right: 58px;
+         }
+         svg {
+           margin-bottom: -1px;
+           margin-right: 10px;
+         }
+       }
+       &:last-child {
+         border-radius: 0px 0px 25px 0px;
+         background-color: $blue;
+       }
+     }
+   }
+ }

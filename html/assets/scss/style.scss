@@ -1,0 +1,36 @@
+// Core
+@import "core/variables";
+@import "core/reset";
+// @import "core/helpers";
+@import "core/fonts";
+@import "core/mixins";
+@import "core/typography";
+@import "core/globals";
+
+// Components
+@import "components/buttons";
+@import "components/accordion";
+@import "components/img";
+@import "components/hamburger";
+
+// Layout
+// @import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/modal";
+
+//blocks
+@import "blocks/block-info";
+@import "blocks/benefits";
+@import "blocks/faqAccordion";
+@import "blocks/breadcrumbs";
+@import "blocks/form";
+
+// Pages
+@import "pages/front-page";
+@import "pages/contact-page";
+@import "pages/blog-page";
+@import "pages/blog-inner";
+@import "pages/faq-page";
+@import "pages/notFound-page";
+

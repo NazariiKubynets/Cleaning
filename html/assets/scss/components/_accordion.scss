@@ -1,0 +1,128 @@
+.accordion {
+   counter-reset: section;
+   margin-bottom: 18px;
+
+   &__item {
+      padding: 7px 15px;
+      border-bottom: 1px solid #E7E7E7;
+      margin-bottom: 10px;
+      padding-left: 70px;
+
+      &:first-child {
+         padding-top: 14px;
+         border-top: 1px solid #E7E7E7;
+      }
+
+      @include r(576) {
+         padding-left: 0px;
+      }
+   }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   &__header {
+      @include transition;
+      position: relative;
+      display: flex;
+      cursor: pointer;
+      justify-content: space-between;
+      width: 100%;
+
+      @include r(576) {
+         padding-left: 30px;
+      }
+
+      p {
+         font-size: 18px;
+         line-height: normal;
+         color: #000;
+         padding-bottom: 7px;
+
+         @include r(576) {
+            font-size: 12px;
+            padding-right: 5px;
+         }
+      }
+
+      span {
+         @include transition;
+         position: relative;
+         top: 3px;
+         width: 10px;
+         height: 10px;
+         border-top: 1px solid #000;
+         border-right: 1px solid #000;
+         @include rotate(135);
+         padding: 3px;
+      }
+   }
+
+   &__ordinal {
+      position: absolute;
+      color: #4682F0;
+      text-align: center;
+      font-size: 18px;
+      line-height: normal;
+      left: -50px;
+
+      &::before {
+         counter-increment: section;
+         content: "0" counter(section);
+      }
+
+      @include r(576) {
+         font-size: 12px;
+         left: 0;
+      }
+   }
+
+   &__content {
+      @include transition;
+      overflow: hidden;
+      color: #555;
+      height: 0;
+      font-size: 12px;
+      line-height: 140%;
+
+      p {
+         padding-right: 105px;
+
+         @include r(1200) {
+            padding-right: 80px;
+         }
+
+         @include r(767) {
+            padding-right: 30px;
+         }
+
+         @include r(576) {
+            padding-right: 0;
+            text-align: center;
+         }
+      }
+
+      ul {
+         padding-left: 25px;
+         list-style-type: square;
+      }
+   }
+
+   &__item--active {
+      .accordion {
+         &__header {
+            margin-bottom: 7px;
+
+            span {
+               top: 9px;
+               @include rotate(315);
+            }
+         }
+
+         &__content {
+            opacity: 1;
+         }
+      }
+   }
+}

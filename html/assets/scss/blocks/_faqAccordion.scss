@@ -1,0 +1,32 @@
+.faqAccordion {
+   background: #F6F6F6;
+   padding-top: 50px;
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 860px;
+   }
+
+   &__title {
+      font-size: 15px;
+      text-align: center;
+      line-height: normal;
+      color: $blue;
+   }
+
+   &__subtitle {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 25px;
+
+      @include r(992) {
+         font-size: 34px;
+      }
+   }
+
+   &__btn {
+      margin-bottom: 50px;
+   }
+}
