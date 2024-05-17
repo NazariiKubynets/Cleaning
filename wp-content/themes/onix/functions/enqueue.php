@@ -18,11 +18,3 @@ add_action('wp_enqueue_scripts', 'onix_include_custom_js');
 
 add_theme_support('post-thumbnails');
 
-// AJAX
-// function enqueue_custom_script()
-// {
-//     wp_enqueue_script('your-script-handle', get_template_directory_uri() . '/frontend/js/app.min.js', array('jquery'), null, true);
-
-//     wp_localize_script('your-script-handle', 'ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
-// }
-// add_action('wp_enqueue_scripts', 'enqueue_custom_script');

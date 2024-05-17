@@ -2,27 +2,30 @@
    margin-bottom: 30px;
    margin-top: 10px;
 
-   a {
-      line-height: normal;
-      color: rgba(30, 30, 35, 0.50);
-      cursor: pointer;
+   ul {
+      display: flex;
 
-      @include r(767) {
-         font-size: 12px;
-      }
-   }
+      li {
+         line-height: normal;
+         color: rgba(30, 30, 35, 0.50);
+         cursor: pointer;
 
-   svg{
-      position: relative;
-      top: 3px;
-      // padding-top: 10px;
-   }
+         &:last-child {
+            color: $dark;
+         }
 
-   &__current {
-      color: $dark;
+         &+li::before {
+            content: '';
+            background-image: url('../icons/chevron-right 1.svg');
+            display: inline-block;
+            background-repeat: no-repeat;
+            height: 12px;
+            width: 15px;
+         }
 
-      @include r(767) {
-         font-size: 12px;
+         @include r(767) {
+            font-size: 12px;
+         }
       }
    }
 }

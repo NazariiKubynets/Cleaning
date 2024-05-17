@@ -141,42 +141,6 @@
       }
    }
 
-   .invalid {
-      .btn {
-         background-color: #FF3A3A;
-      }
-   }
-
-   .failed {
-      .btn {
-         background-color: rgb(70, 130, 240);
-      }
-
-      .form__input {
-         border: 1px solid rgb(70, 130, 240);
-         color: rgb(70, 130, 240);
-      }
-   }
-
-   .wpcf7-response-output {
-      display: none;
-   }
-
-   .wpcf7-not-valid {
-      border: 1px solid #FF3A3A;
-      color: #FF3A3A;
-
-      &-tip {
-         text-transform: uppercase;
-      }
-   }
-
-   .wpcf7-spinner{
-      display: none;
-   }
-
-
-
 }
 
 .testimonials {

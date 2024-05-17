@@ -34,9 +34,15 @@
       }
    }
 
-   &__label {
-      font-size: 16px;
-      font-weight: 500;
+   &__label{
+      color: $dark;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: normal;
+
+      &_span {
+         color: $blue;
+      }
    }
 
    &__input {
@@ -62,6 +68,10 @@
          border: 1px solid #FF3A3A;
          color: #FF3A3A;
       }
+
+      @include r(1200) {
+         max-width: 100%;
+      }
    }
 
    &_phone {
@@ -73,10 +83,17 @@
       width: 100%;
       resize: none;
       min-height: 120px;
+      font-weight: 400;
       padding: 15px;
+      color: #000;
+      border-radius: 15px 0px;
+      border: 1px solid rgba(30, 30, 35, 0.20);
+      margin-top: 12px;
 
-      &._error {
-         border: 1px solid #FF3A3A;
+      &::placeholder {
+         color: rgba(30, 30, 35, 0.35);
+         text-transform: uppercase;
+         font-size: 15px;
       }
    }
 
@@ -164,4 +181,48 @@
          }
       }
    }
+}
+
+.invalid {
+   .btn {
+      background-color: #FF3A3A;
+   }
+}
+
+.failed {
+   .btn {
+      background-color: rgb(70, 130, 240);
+   }
+
+   .form__input {
+      border: 1px solid rgb(70, 130, 240);
+      color: rgb(70, 130, 240);
+   }
+
+   .form__textarea{
+      border: 1px solid rgb(70, 130, 240);
+      color: rgb(70, 130, 240);
+   }
+}
+
+.wpcf7-response-output {
+   display: none;
+}
+
+.wpcf7-not-valid {
+   border: 1px solid #FF3A3A;
+   color: #FF3A3A !important;
+
+   &::placeholder{
+      color: #FF3A3A;
+   }
+
+   &-tip {
+      text-transform: uppercase;
+      color:#FF3A3A;
+   }
+}
+
+.wpcf7-spinner{
+   display: none;
 }

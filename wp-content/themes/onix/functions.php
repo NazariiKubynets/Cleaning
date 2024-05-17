@@ -39,33 +39,58 @@ function my_navigation_template($template, $class)
     ';
 }
 
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length($length)
+{
     return 15;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-function custom_excerpt_more( $more ) {
+function custom_excerpt_more($more)
+{
     return '...';
 }
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+add_filter('wpcf7_form_autocomplete', function ($autocomplete) {
+    $autocomplete = 'off';
+    return $autocomplete;
+}, 10, 1);
 
 
 
-function custom_wpcf7_validate($result, $tags) {
-    error_log("Функція-обробник хука спрацювала.");
-    $tag = new WPCF7_Shortcode($tags);
+add_filter('wpcf7_validate_text*', 'custom_name_validation_filter', 20, 2);
 
-    if ('text-727' == $tag->name) {
-        $value = isset($_POST[$tag->name]) ? trim(wp_unslash(strtr((string) $_POST[$tag->name], "\n", " "))) : '';
-        error_log("Значення поля: $value"); // Додати вивід значення поля у журнал помилок
-        if (preg_match('/\d/', $value)) {
-            $result->invalidate($tag, "Поле не може містити цифри.");
+function custom_name_validation_filter($result, $tag)
+{
+    $fields_to_check = array('text-727', 'your-name'); // Масив ідентифікаторів полів, які потрібно перевірити
+
+    if (in_array($tag->name, $fields_to_check)) { // Перевіряємо, чи ідентифікатор поля знаходиться у масиві
+        $your_name = isset($_POST[$tag->name]) ? trim($_POST[$tag->name]) : '';
+
+        if (preg_match('/\d/', $your_name)) {
+            $result->invalidate($tag, "
+            This field cannot contain numbers.");
         }
     }
 
     return $result;
 }
-add_filter('wpcf7_validate', 'custom_wpcf7_validate', 10, 2);
 
+function custom_breadcrumbs()
+{
+    echo '<div class="breadcrumbs">
+            <div class="breadcrumbs__container container">
+                <ul class="breadcrumb list-unstyled">';
+    if (is_front_page()) {
+        echo get_the_title();
+    } else {
+        echo '<li><a href="' . home_url() . '">Home</a>&nbsp;</li>';
+        if (is_single()) {
+            echo '<li><a href="/blog">Blog</a>&nbsp;</li>';
+        } 
+        echo '<li>' . get_the_title() . '</li>';
+    }
+    echo '</ul> </div> </div>';
+}
 
 

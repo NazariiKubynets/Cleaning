@@ -7,16 +7,6 @@
 <?php get_header(); ?>
 
 <main>
-   <div class="breadcrumbs">
-      <div class="breadcrumbs__container container">
-         <a href="\..\">Home</a>
-         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
-            <path d="M5.25 11L8.75 7.5L5.25 4" stroke="#1E1E23" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round" />
-         </svg>
-         <span class="breadcrumbs__current">404 page</span>
-      </div>
-   </div>
-
    <section class="notFound">
       <div class="notFound__container container">
          <svg xmlns="http://www.w3.org/2000/svg" width="405" height="155" viewBox="0 0 405 155" fill="none">
@@ -29,13 +19,13 @@
             exist or has been moved. <br> Here are some helpful links:
          </p>
          <div class="notFound__btn">
-            <a class="btn" href="javascript:void(0);" onclick="goBack()">
+            <a class="btn goBack" href="javascript:void(0);">
                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
                   <path d="M0.575736 5.30506C0.341421 5.07075 0.341421 4.69085 0.575736 4.45653L4.39411 0.638157C4.62843 0.403843 5.00833 0.403843 5.24264 0.638157C5.47696 0.872472 5.47696 1.25237 5.24264 1.48669L1.84853 4.8808L5.24264 8.27491C5.47696 8.50923 5.47696 8.88912 5.24264 9.12344C5.00833 9.35775 4.62843 9.35775 4.39411 9.12344L0.575736 5.30506ZM11 5.4808H1V4.2808H11V5.4808Z" fill="#1E1E23" />
                </svg>
                Go back
             </a>
-            <a class="btn" href="index.html">Take me home</a>
+            <a class="btn" href="/../">Take me home</a>
          </div>
       </div>
    </section>

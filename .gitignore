@@ -7,7 +7,7 @@ wp-content/uploads
 wp-content/index.php
 wp-includes
 .htaccess
-index.php
+/index.php
 license.txt
 readme.html
 wp-activate.php

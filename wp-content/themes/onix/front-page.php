@@ -61,21 +61,6 @@
                echo do_shortcode('[contact-form-7 id="c0fb60a" title="Contact form front page"]');
             ?>
          </div>
-         
-         <!-- <form action="#" class="forma__form form" method="POST">
-            <h3 class="form__title">Find out how much your cleaning costs</h3>
-            <div class="form__item">
-               <input id="formName" type="text" name="name" placeholder="NAME" class="form__input _req">
-            </div>
-            <div class="form__item">
-               <input id="formPhone" type="tel" name="phone" placeholder="PHONE NUMBER" class="form__input _req _phone">
-            </div>
-            <div class="form__btn">
-               <button type="submit" class="btn form__btn_button" name="submit">
-                  Confirm
-               </button>
-            </div>
-         </form> -->
       </div>
    </section>
    <?php

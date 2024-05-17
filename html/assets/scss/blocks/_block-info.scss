@@ -143,6 +143,11 @@
          ul {
             padding-left: 25px;
             list-style-type: square;
+
+            @include r(767) {
+               text-align: left;
+               max-width: 400px;
+            }
          }
 
          @include r(1320) {
@@ -151,6 +156,10 @@
 
          @include r(767) {
             padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
          }
       }
 

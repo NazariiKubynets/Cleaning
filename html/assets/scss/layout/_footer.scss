@@ -163,7 +163,7 @@
    &__menu {
       .menu {
          display: grid;
-         grid-template: 100% / 176px 100px 83px 75px 35px 63px 32px;
+         grid-template: min-content/ max-content repeat(6, min-content);
          grid-gap: 35px;
 
          @include r(1326) {
@@ -171,21 +171,21 @@
          }
 
          @include r(992) {
-            grid-gap: 0px 41px;
-            grid-template: 38px 2em 1fr 1fr/ 176px 100px 63px 32px;
-            margin-bottom: 10px;
+            grid-gap: 12px 41px;
+            grid-template: repeat(4, min-content)/ max-content repeat(3, min-content);
+            margin-bottom: 22px;
          }
 
          @include r(767) {
-            grid-template: 38px 189px/ 176px 100px 75px 63px;
-            grid-gap: 0px 47px;
+            grid-gap: 10px 47px;
          }
 
          @include r(576) {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            li{
+
+            li {
                margin: 0;
             }
          }
@@ -218,124 +218,71 @@
 
          }
 
-         
+
       }
 
       @include r(992) {
-         .menu-item-308, .menu-item-306, .menu-item-348{
+
+         .menu-item-308,
+         .menu-item-306,
+         .menu-item-348 {
             grid-column-start: 2;
-            margin-top: 15px;
          }
-         .menu-item-305{
+
+         .menu-item-305 {
             grid-row-start: 1;
             grid-column-start: 3;
          }
-         .menu-item-303{
+
+         .menu-item-303 {
             grid-row-start: 1;
             grid-column-start: 4;
+         }
+
+         .menu-item-294 {
+            grid-row: 1/end;
          }
       }
 
       @include r(767) {
-         .menu-item-308{
+
+         .menu-item-294 {
+            grid-row: span 5;
+            grid-column-start: 1;
+         }
+
+         .menu-item-301 {
+            grid-row: span 2;
             grid-column-start: 2;
-            margin-top: 15px;
          }
-         .menu-item-306{
-            margin-top: 0;
-            grid-row-start: 1;
+
+         .menu-item-308 {
+            grid-row-start: 3;
+            grid-column-start: 2;
+         }
+
+         .menu-item-306 {
+            grid-row: span 3;
             grid-column-start: 3;
          }
-         .menu-item-348{
-            margin-top: 45px;
+
+         .menu-item-348 {
+            grid-row-start: 4;
+            grid-column-start: 3;
+         }
+
+         .menu-item-305 {
+            grid-row: 1;
+            align-self: start;
+            grid-column-start: 4;
+         }
+
+         .menu-item-303 {
             grid-row-start: 2;
-            grid-column-start: 3;
-         }
-         .menu-item-303{
-            grid-row-start: 1;
-            grid-column-start: 4;
-            margin-top: 30px;
-         }
-         .menu-item-305{
-            grid-row-start: 1;
             grid-column-start: 4;
          }
       }
 
-     
-
-      .menu-item-301 {
-         max-width: 100px;
-      }
-
-
-
-
-      // &_row {
-      //    display: flex;
-      //    gap: 35px;
-
-      //    @include r(1326) {
-      //       gap: 21px;
-      //    }
-
-      //    @include r(992) {
-      //       flex-direction: column;
-      //       gap: 12px;
-      //    }
-
-      //    @include r(767) {
-      //       flex-direction: row;
-      //       gap: 37px;
-      //    }
-
-      //    @include r(576) {
-      //       flex-direction: column;
-      //       gap: 20px;
-      //    }
-
-      //    >div {
-      //       display: flex;
-      //       gap: 35px;
-
-      //       @include r(1326) {
-      //          gap: 21px;
-      //       }
-
-      //       @include r(992) {
-      //          flex-direction: column;
-      //          gap: 12px;
-      //       }
-
-      //       @include r(576) {
-      //          gap: 20px;
-      //       }
-      //    }
-      // }
-
-      // >div {
-      //    &:last-child {
-      //       display: flex;
-      //       gap: 35px;
-
-      //       @include r(1326) {
-      //          gap: 21px;
-      //       }
-
-      //       @include r(992) {
-      //          gap: 44px;
-      //       }
-
-      //       @include r(767) {
-      //          flex-direction: column;
-      //          gap: 10px;
-      //       }
-
-      //       @include r(576) {
-      //          gap: 20px;
-      //       }
-      //    }
-      // }
    }
 
 
